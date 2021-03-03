@@ -1,0 +1,33 @@
+<div style="text-align: center;">
+
+<h3>Formulaire :</h3>
+<br>
+
+<p>Nom :</p>
+<input [(ngModel)]="nom"/>
+
+<p>Prénom :</p>
+<input [(ngModel)]="prenom"/>
+
+<p>Email :</p>
+<input [(ngModel)]="email"/>
+
+<p>Mot de passe: </p>
+<input type="password" [(ngModel)]="password"/>
+
+<p>Confirmer :</p>
+<input type="password" [(ngModel)]="confirmationPassword"/>
+
+<p>Adresse :</p>
+<input [(ngModel)]="adresse"/>
+
+<p>Ville :</p>
+<input [(ngModel)]="ville"/>
+
+<br><br>
+<button class="btn-lg btn-primary" (click)="verifFormulaire()">Envoyer</button>
+<br><br>
+{{affichageVerif}}
+{{affichageVerifMdp}}
+
+</div>
