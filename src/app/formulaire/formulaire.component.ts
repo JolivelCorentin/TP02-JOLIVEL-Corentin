@@ -17,7 +17,7 @@ export class FormulaireComponent implements OnInit {
   adresse : string;
   ville : string;
 
-  verification : boolean = false;
+  verification : boolean = true;
 
   affichageVerif : string;
   affichageVerifMdp : string;
@@ -26,20 +26,12 @@ export class FormulaireComponent implements OnInit {
   {     
     if(this.nom == null || this.prenom == null || this.email == null || this.password == null  || this.confirmationPassword == null || this.adresse == null || this.ville == null)
     {
-      this.verification = false;
+        this.affichageVerif = "Tous les champs ne sont pas remplis !";
+        this.verification = false;
     }
     else
-    {
-      this.verification = true;
-    }
-
-    if(this.verification == true)
     {
         this.affichageVerif = "Données validées ! Vous pouvez consulter le récapitulatif !";
-    }
-    else
-    {
-      this.affichageVerif = "Tous les champs ne sont pas remplis !";
     }
 
     if(this.password == this.confirmationPassword)
@@ -49,6 +41,7 @@ export class FormulaireComponent implements OnInit {
     else
     {
       this.affichageVerifMdp = "Les mots de passe entrés ne sont pas similaires !";
+      this.verification = false;
     }
   }
 

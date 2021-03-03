@@ -6,6 +6,7 @@
 <p>Nom :</p>
 <input [(ngModel)]="nom"/>
 
+
 <p>Prénom :</p>
 <input [(ngModel)]="prenom"/>
 
@@ -31,3 +32,7 @@
 {{affichageVerifMdp}}
 
 </div>
+
+
+<app-recapitulatif [nom]='nom' [prenom]='prenom' [email]='email' [adresse]='adresse' [ville]='ville'></app-recapitulatif>
+

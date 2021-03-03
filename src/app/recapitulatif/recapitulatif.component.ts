@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recapitulatif',
@@ -9,13 +9,13 @@ export class RecapitulatifComponent implements OnInit {
 
   constructor() { }
 
-  nom : string = "";
-  prenom : string = "";
-  email : string = "";
-  password : string = "";
-  adresse : string = "";
-  ville : string = "";
-  
+  @Input() nom : string = "";
+  @Input() prenom : string = "";
+  @Input() email : string = "";
+  @Input() password : string = "";
+  @Input() adresse : string = "";
+  @Input() ville : string = "";
+
   ngOnInit(): void {
   }
 
