@@ -32,5 +32,5 @@
 
 </div>
 
-<app-recapitulatif [nom]='nom' [prenom]='prenom' [email]='email' [adresse]='adresse' [ville]='ville'></app-recapitulatif>
+<app-recapitulatif *ngIf="verification" [nom]='nom' [prenom]='prenom' [email]='email' [adresse]='adresse' [ville]='ville'></app-recapitulatif>
 

@@ -17,7 +17,7 @@ export class FormulaireComponent implements OnInit {
   adresse : string;
   ville : string;
 
-  verification : boolean = true;
+  verification : boolean = false;
 
   affichageVerif : string;
   affichageVerifMdp : string;
@@ -32,6 +32,7 @@ export class FormulaireComponent implements OnInit {
     else
     {
         this.affichageVerif = "Données validées ! Vous pouvez consulter le récapitulatif !";
+        this.verification = true;
     }
 
     if(this.password == this.confirmationPassword)
